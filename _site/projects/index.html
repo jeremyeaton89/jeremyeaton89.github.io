@@ -61,12 +61,31 @@ ript>
       </div>
       <div class="content row-fluid">
         <div class="span8">
-          <h1>AJAX</h1>
+          <h1>Projects</h1>
 
-<p>We had our first go at Ajax today. If you pass an option to your form and set remote to true, this tells the form to make a request asynchronously and behind the scenes. We can then use jQuery to listen for this request and handle the response. This enables us to update a view without refreshing the entire page, which is pretty sexy.</p>
+<h3>SoundStorm</h3>
 
-<p>We also had our first experience with underscore’s templating technology. We solved the problem of the client not having access to our database by doing something called bootstrapping. With this technique, we write a script tag (that won’t be rendered, due to setting ambiguous type attribute) and render Json within it so that our “views” have access to data pulled from the db. We can also load up a template built with JavaScript, grab its contents with jQuery, and pass it to a templataing method provided by underscore, where we can also pass our resources (parsed from JSON). More on Friday!</p>
+<a href="http://soundstorm.herokuapp.com"><h5>Demo</h5></a>
+<p>Username: "guest", Password: "password"</p>
+<a href="https://github.com/jeremyeaton89/Sound_Storm"><h5>Code</h5></a>
 
+<p>SoundStorm is my rendition of SoundCloud, a social platform for sharing music. This project uses <em>Ruby on Rails</em> at the back, serving <em>Backbone.js</em> on top. </p>
+
+<h5>Noteworthies</h5>
+<ul>
+	<li>File upload with <em>PaperClip</em></li>
+	<li>Remote file storage with <em>Amazon S3</em></li>
+	<li>Custom Audio Player, CSS, and JS</li>
+	<li>Following, Play Sets, Likes, (audio) Seeking, Comments"
+	<li>Try playing thru a track and watch comments pop!</li>
+</ul>
+
+
+<h3>Active Record Lite</h3>
+
+<a href="https://github.com/jeremyeaton89/ActiveRecordLite"><h5>Code</h5></a>
+
+<p>Active Record Lite is a simpler version of Active Record, the ORM behind Ruby on Rails. This was my first experience with metaprogramming, where I am able to establish associations (belongs_to, has_many, has_one_through) and dynamically create methods on those associated objects.</p>
         </div>
       </div>
     </div>
