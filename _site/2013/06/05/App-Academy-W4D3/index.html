@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <title>Jeremy Eaton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog/Portfolio">
+
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 60px;
+    }
+  </style>
+  <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+ript>
+  <![endif]-->
+</head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".na\
+v-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">Jeremy Eaton</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="/">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="sidebar span4">
+        <h3>Jeremy Eaton</h3>
+
+<img src="/assets/linked_in_profile.jpg">
+
+<p>QA Engineer turned Ruby on Rails / Backbone.js dev</p>
+
+<h3>Recent Posts</h3>
+
+<ul>
+  
+    <li><a href="/2013/08/08/A-Rekindled-Code-Practice/">A Rekindled Coding Practice</a></li>
+  
+    <li><a href="/2013/06/28/App-Academy-W7D5/">Last Day of Pair Programming</a></li>
+  
+    <li><a href="/2013/06/24/App-Academy-W7D1/">Ajaxification</a></li>
+  
+    <li><a href="/2013/06/20/App-Academy-W6D4/">AJAX</a></li>
+  
+    <li><a href="/2013/06/19/App-Academy-W6D3/">jQuery Magic</a></li>
+  
+</ul>
+      </div>
+      <div class="content row-fluid">
+        <div class="span8">
+          <h1>The "C" in MVC</h1>
+
+<p>The big thing today was understanding routes, controllers and sessions. We use a session to track who is logged into our application. It has no model, but rails gives us a special hash called session that persists for the span of a browser use session. We randomly generate a session token and save it into the users table, and we reset this every time we create a session. We save the session token into the session hash so that we can find the user across all controllers, And we destroy it on logout.</p>
+
+<p>In our routes file, we use the resources method and pass in a table name as a symbol. This will create 7 routes using each of the 4 http methods.</p>
+
+<p>An http request-response life cycle begins with the request issued by the client. This request contains the http method and a path. The router takes this request and matches it with the methods and paths that it has and finds the corresponding controller and method. It then instantiates an instance of that controller class and calls the action/method. In that controller method, we can do a number of things, but there is a good practice, following rest. Some of these requests contain URL parameters, like ones corresponding to show or edit because we need a specific resource to show. This Id can be accessed with the params method in the controller. When we are posting (creating) or putting (updating) a resource, we generally will have a form, each input field corresponding to an attribute we wish to define. We can access these parameters in the controller using the params method as well.</p>
+
+<p>We can then use a model class method to create or update a resource, passing in these attributes via params. In these cases, we usually have a condition where after we create a new model object, we save it, and if it saves we redirect to a view that shows the resource, else we add an error to that resource, and we can render this error on a view that we redirect to on save failure.</p>
+
+<p>These. Views that we are rendering are the bodies of each http response. We can set instance variables in our controllers to then have them rendered in our views - it’s kind if a wonky thing, but its the rails way (global variables instead? Maybe too dangerous? Idk).</p>
+
+<p>Ill revisit sessions/authentication in the morning (hopefully). Cheers!</p>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

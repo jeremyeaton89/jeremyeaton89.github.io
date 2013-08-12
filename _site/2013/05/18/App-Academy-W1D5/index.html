@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8">
+  <title>Jeremy Eaton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog/Portfolio">
+
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 60px;
+    }
+  </style>
+  <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+ript>
+  <![endif]-->
+</head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".na\
+v-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">Jeremy Eaton</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="/">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="sidebar span4">
+        <h3>Jeremy Eaton</h3>
+
+<img src="/assets/linked_in_profile.jpg">
+
+<p>QA Engineer turned Ruby on Rails / Backbone.js dev</p>
+
+<h3>Recent Posts</h3>
+
+<ul>
+  
+    <li><a href="/2013/08/08/A-Rekindled-Code-Practice/">A Rekindled Coding Practice</a></li>
+  
+    <li><a href="/2013/06/28/App-Academy-W7D5/">Last Day of Pair Programming</a></li>
+  
+    <li><a href="/2013/06/24/App-Academy-W7D1/">Ajaxification</a></li>
+  
+    <li><a href="/2013/06/20/App-Academy-W6D4/">AJAX</a></li>
+  
+    <li><a href="/2013/06/19/App-Academy-W6D3/">jQuery Magic</a></li>
+  
+</ul>
+      </div>
+      <div class="content row-fluid">
+        <div class="span8">
+          <h1>Algos: DFS and BFS</h1>
+
+<p>Friday! Today was a good day. We learned about and implemented two handy algorithms: Depth First Search and Breadth First Search. At first, i struggled with the implementation of DFS because I didn’t understand how one would backtrace after encountering a dead end, until Ned explained there is no backtrace. The way I understand it now is that we choose a direction (say left), to search down a tree. We ask if our current node is the node we’re looking for, if so, we return the node, else we check both the left and right nodes (if they exist). If there’s a left child, we call DFS on that node, and if there’s a right child, we call DFS on the right child. What i didn’t understand at first was that if our current node is not the correct node, there will be recursive calls to DFS down the left branch of the tree, and if we haven’t found anything down the left branch, we don’t actually backtrack back up. Instead we step into right right child and recursively check down that path (going left first wherever possible, then right). I still need to review the problems of the day to better understand how to implement this.</p>
+
+<p>Breadth first search was much easier for me to conceptualize. We have a queue, then we push the root node into the queue. Then we step into a loop that won’t end until our queue is empty. At the top of our loop, we shift the parent (in this case, our root) node out of the queue. We check if this node is the node we’re looking for. If so, return, else push all of its children into the queue. On our next time through the loop, we have a queue full of these children. We then shift out the first child, then check if this node is the node we’re looking for. If it is, return, else push all of its children into the queue. At this point, our queue, in order from left to right, should have all of our root node’s children (except the one we just shifted out), and then behind them, we should have all the children of the node (root’s child) we just shifted out of the queue. We keep repeating this cycle, where we step down a level in our tree, checking if any of these children are the nodes we’re looking for. Once we check all the children, then we check all of the children’s children. The loop will end if we find the node we’re looking for, or until the queue is empty, which would mean that the node does not exist in the tree.</p>
+
+<p>As I was writing this, i have come to the realization that this writing assignment is hugely important!. As I was explaining, there were points that i realized i was fuzzy on, so this exercise is a great way of illuminating these gaps in understanding. This exercise will also improve my ability to communicate my thoughts to my programming partner in a coherent manner. If i am unable to communicate properly, then i must not have a clear idea or understanding of the concepts i wish to employ. I’m tempted to backtrace through the curriculum and try explaining each one again!</p>
+
+<p>Also, I need to be better about studying Ned’s solutions to the problems and projects of each day. These practices (writing about what i’ve learned and studying code more advanced than mine) are huge! I must not neglect these.</p>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

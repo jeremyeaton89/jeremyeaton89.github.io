@@ -1,0 +1,8 @@
+.sidebar {
+	position: fixed;
+	width: 250px;
+}
+
+.content {
+	margin-left: 250px;
+}

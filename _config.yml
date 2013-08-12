@@ -1,0 +1,10 @@
+name: "Jeremy Eaton"
+description: "Blog/Portfolio"
+
+url: "[http://localhost:4000]"
+
+paginate: 5
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
