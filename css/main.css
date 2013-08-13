@@ -1,5 +1,6 @@
 .sidebar {
 	position: fixed;
+	margin-top: 28px;
 	width: 250px;
 	float: left;
 }
@@ -9,5 +10,31 @@
 }
 
 p.profile-exerpt {
+	margin-top: 10px;
 	padding-right: 35px;
+}
+
+.fixed {
+	background-color: white;
+	position: fixed;
+	top: 30px;
+	left: 340px;
+	height: 70px;
+	width: 100%;
+	padding-top: 20px;
+}
+
+h5.tight {
+	margin-top: -10px;
+}
+
+p.tight {
+	margin-top: -5px;
+}
+
+.date {
+	font-size: 12px;
+	font-weight: normal;
+	position: relative;
+	left: 10px;
 }

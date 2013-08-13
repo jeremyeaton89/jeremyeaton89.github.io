@@ -7,7 +7,7 @@ layout: default
 
 * Ruby / Ruby on Rails / Rspec
 
-* JavaScript / JQuery / Backbone.js / Underscore.js
+* JavaScript / JQuery / Backbone.js
 
 * SQL / SQLite / PostgreSQL
 
@@ -21,19 +21,21 @@ layout: default
 
 ## Education
 
-#### App Academy
+<h4>App Academy <span class="date">May 2013 - July 2013</span></h4>
 
 *9 week, full time Ruby on Rails / JavaScript / SQL Web Development Boot Camp.*
 
-#### University of California, Berkeley
+[Carriculum](http://www.appacademy.io/#p-curriculum)
+
+<h4>University of Calfornia, Berkeley <span class="date">August 2007 - May 2011</span></h4>
 
 *BS, Environmental Science, Policy & Management*
 
+GPA: 3.4 (major), 3.2 (cumulative)
+
 ## Professional Experience
 
-#### Avant, LLC
-
-*San Francisco, CA June 2011 – April 2013*
+<h4>Avant, LLC <span class="date">San Francisco, CA June 2011 – April 2013</span></h4>
 
 **Quality Assurance Engineer**
 
@@ -45,9 +47,7 @@ layout: default
 
 * MyBrainSolutions.com is a rich ASP .NET application designed to assess users’ minds and provide gamified training solutions for their mental and emotional wellbeing.
 
-#### Rondavu Inc.
-
-*San Francisco, CA November 2008 – February 2009*
+<h4>Rondavu, Inc. <span class="date">San Francisco, CA November 2008 – February 2009</span></h4>
 
 **Internet Marketing Intern**
 
