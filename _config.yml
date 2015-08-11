@@ -1,0 +1,12 @@
+# Site settings
+title: Jeremy Eaton
+email: jeremyeaton89@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Jeremy Eaton's website, blog, resume, scratch paper :)
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jeremyeaton.co" # the base hostname & protocol for your site
+twitter_username: jeremyeaton89
+github_username:  jeremyeaton89
+
+# Build settings
+markdown: kramdown
