@@ -1,11 +1,26 @@
 h1 {
   margin: 0;
 }
-header.index {
-  width: 100%;
-  height: 100px;
-  background-color: #636367;
-  display: block;
+a {
+  cursor: pointer;
+}
+.post-list a, .post-list a:hover {
+  color: black;
+}
+.post-list a:visited {
+  color: #DC9004;
+}
+.h2-container h2 {
+  float: left;
+}
+.h2-container {
+  height: 40px;
+}
+.h2-container a:visited {
+  color: black;
+}
+.h2-container a {
+  margin-left: 20px;
 }
 #project_carousel { 
   width: 100%;
@@ -15,22 +30,60 @@ header.index {
   display: block;
   cursor: pointer;
 }
-#nav ul {
-  height: 45px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-#nav li {
-  display: inline-block;
-}
-
 #blog_feed {
-  position: absolute;
-  right: 10px;
-  top: 20px;
   border: 1px solid black;
   width: 200px;
   height: 60px;
+  float: right;
+  margin-left: 100%;
+  margin-bottom: 20px;
+}
+#blog .post-list li {
+  margin-bottom: 15px;
+}
+#blog .post-list h2 {
+  margin-bottom: 0;
+}
+a.view-more {
+  float: right;
+  margin-top: 10px;
+}
+#blog_pagination {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+
+}
+#blog_pagination li {
+  list-style-type: none;
+  display: inline-block;
+  border: 1px solid gray;
+  height: 30px;
+  min-width: 40px;
+  border-radius: 3px;
+}
+#blog_pagination #next, #blog_pagination #prev {
+  width: 60px;
+}
+#blog_pagination li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  line-height: 30px;
+}
+#blog_pagination .active {
+  background: #DC9004;
+}
+#blog_pagination .disabled {
+  background: lightgray;
+  pointer-events: none;
+  cursor: default;
+}
+#blog_pagination a {
+  text-decoration: none;
+  color: black;
+}
+#blog_pagination a:hover {
+  color: lightgray;
 }

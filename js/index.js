@@ -14,4 +14,41 @@ $(function() {
     autoPlay: 5000,
     paginationSpeed: 500,
   });
+
+  // Blog Pagination
+  $('#blog_pagination a').click(function() {
+    var nextPage = $(this).data('next-page');
+
+    $.ajax({
+      url: document.URL + (nextPage === 1 ? '' : '/page' + nextPage),
+      success: function(response, status) {
+        var htmlList = $.parseHTML(response);
+
+        htmlList.forEach(function(node) {
+          var $html = $(node);
+
+          if ($html.is('.page-content')) {
+            $('.post-list').html($html.find('.post-list').html());
+
+            var totalPages = $('.post-list').data('total-pages');
+            $('#blog_pagination .disabled').removeClass('disabled');
+            $('#blog_pagination .active').removeClass('active');
+
+            // Update pagination status'
+            $('#blog_pagination a:contains('+nextPage+')').addClass('active');
+            if (nextPage === totalPages) {
+              $('#next').addClass('disabled')
+            } else if (nextPage === 1) {
+              $('#prev').addClass('disabled')
+            }
+            $('#prev').data('next-page', (nextPage - 1))
+            $('#next').data('next-page', (nextPage + 1));
+          }
+        })
+      },
+      error: function(response, status) {
+        console.log('ERROR: ' + response.statusText);
+      },
+    })
+  })
 })

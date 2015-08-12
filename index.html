@@ -3,71 +3,64 @@ title: Jeremy Eaton
 layout: default
 ---
 
-<!DOCTYPE html>
-<html>
 
 
-  <body>
-    <header class='index'>
-      <h1>Jeremy Eaton</h1>
-      <ul id='nav'>
-        <li><a id='projects_link'   href='#'>Projects</a></li>
-        <li><a id='experience_link' href='#'>Experience</a></li>
-        <li><a id='blog_link'       href='#'>Blog</a></li>
-      </ul>
+<!--   <div id='blog_feed'>
+Latest Blog Entry
+</div> -->
 
-      <div id='blog_feed'>
-        Latest Blog Entry
-      </div>
+<div class='h2-container'>
+  <h2>Projects</h2>
+  <a class='view-more' href='#'>View All</a>
+</div>
 
-    </header>
+<div id='project_carousel' class='owl-carousel'>
+  <div><img src='img/eon_project_image.png' /></div>
+  <div><img src='img/hunt_project_image.png' /></div>
+  <div><img src='img/mbs_project_image.png' /></div>
+</div>
 
-    <div id='index_content'>
+<div id='experience'>
 
-      <h2>Projects</h2>
-      <a href='#'>View All</a>
+  <div class='h2-container'>
+    <h2>Proficiency</h2>
+    <a class='view-more' href='#'>View Résumé</a>
+  </div>
 
-      <div id='project_carousel' class='owl-carousel'>
-        <div><img src='img/eon_project_image.png' /></div>
-        <div><img src='img/hunt_project_image.png' /></div>
-        <div><img src='img/mbs_project_image.png' /></div>
-      </div>
+  <ul>
+    <li>Javascript</li>
+    <li>Ruby</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>(My)SQL</li>
+    <li>Objective-C</li>
+    <li>Cordova</li>
+    <li>ReactJS</li>
+  </ul>
 
-      <div id='experience'>
+</div>
 
-        <h2>Experience</h2> <!-- Proficiency -->
-        <a href='#'>View Resume</a>
+<div id='blog'>
 
-        <ul>
-          <li>Javascript</li>
-          <li>Ruby</li>
-          <li>Html</li>
-          <li>CSS</li>
-          <li>MySQL</li>
-          <li>Objective-C</li>
-          <li>Cordova</li>
-          <li>ReactJS</li>
-        </ul>
-      
-      </div>
+  <h2>Prose</h2>
+  <ul class="post-list" data-total-pages="{{ paginator.total_pages }}">
+    {% for post in paginator.posts %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <ul id='blog_pagination'>
+    <li class='disabled'><a id='prev' data-next-page='1'>prev</a></li>
+    <li class='active'><a data-next-page='1'>1</a></li>
+    {% for count in (2..paginator.total_pages) %}
+      <li><a data-next-page='{{count}}'>{{count}}</a></li>
+    {% endfor %}
+    <li><a id='next' data-next-page='2'>next</a></li>
+  </div>
+</div>
 
-      <div id='blog'>
 
-        <h2>Blog</h2>
-
-        <ul class="post-list">
-          {% for post in site.posts %}
-            <li>
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-              <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </h2>
-            </li>
-          {% endfor %}
-        </ul>
-
-      </div>
-    </div>
-  </body>
-</html>
