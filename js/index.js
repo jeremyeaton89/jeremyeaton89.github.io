@@ -1,12 +1,9 @@
 $(function() {
 
   // Nav
-  function scroll(top) {
-    $('body').animate({ scrollTop: top }, 500);
-  }
-  $('a#projects_link').click(function()   { scroll(300) });
-  $('a#experience_link').click(function() { scroll(500) });
-  $('a#blog_link').click(function()       { scroll(700) });
+  $('a.page-link.blog').click(function() { 
+    $('body').animate({ scrollTop: $('#blog').offset().top }, 500);
+  });
 
   // Carousel
   $('#project_carousel').owlCarousel({
@@ -17,10 +14,11 @@ $(function() {
 
   // Blog Pagination
   $('#blog_pagination a').click(function() {
+    if ($(this).is('active')) return;
     var nextPage = $(this).data('next-page');
 
     $.ajax({
-      url: document.URL + (nextPage === 1 ? '' : '/page' + nextPage),
+      url: document.URL.split('#')[0] + (nextPage === 1 ? '' : '/page' + nextPage),
       success: function(response, status) {
         var htmlList = $.parseHTML(response);
 
@@ -37,9 +35,9 @@ $(function() {
             // Update pagination status'
             $('#blog_pagination a:contains('+nextPage+')').addClass('active');
             if (nextPage === totalPages) {
-              $('#next').addClass('disabled')
+              $('#next').parent('li').addClass('disabled')
             } else if (nextPage === 1) {
-              $('#prev').addClass('disabled')
+              $('#prev').parent('li').addClass('disabled')
             }
             $('#prev').data('next-page', (nextPage - 1))
             $('#next').data('next-page', (nextPage + 1));

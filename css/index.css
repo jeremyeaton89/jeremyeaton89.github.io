@@ -1,14 +1,19 @@
-h1 {
+h1, h4 {
   margin: 0;
 }
 a {
   cursor: pointer;
 }
-.post-list a, .post-list a:hover {
-  color: black;
+.post-list a, .post-list a:hover,
+.site-footer a, .site-footer a:hover {
+  color: black !important;
 }
-.post-list a:visited {
+.post-list a:visited,
+.site-footer a:visited {
   color: #DC9004;
+}
+.site-nav {
+  z-index: 2;
 }
 .h2-container h2 {
   float: left;
@@ -16,7 +21,7 @@ a {
 .h2-container {
   height: 40px;
 }
-.h2-container a:visited {
+.h2-container a, .h2-container a:visited, .h2-container a:hover {
   color: black;
 }
 .h2-container a {
@@ -30,13 +35,14 @@ a {
   display: block;
   cursor: pointer;
 }
-#blog_feed {
-  border: 1px solid black;
-  width: 200px;
-  height: 60px;
-  float: right;
-  margin-left: 100%;
-  margin-bottom: 20px;
+#project_carousel .owl-page.active span {
+  background-color: #DC9004;
+}
+#experience ul {
+  margin-top: 15px;
+}
+.post-list {
+  margin-left: 25px;
 }
 #blog .post-list li {
   margin-bottom: 15px;
@@ -74,16 +80,31 @@ a.view-more {
 }
 #blog_pagination .active {
   background: #DC9004;
-}
-#blog_pagination .disabled {
-  background: lightgray;
   pointer-events: none;
   cursor: default;
+}
+#blog_pagination .disabled {
+  /*background: lightgray;*/
+  pointer-events: none;
+  cursor: default;
+}
+#blog_pagination .disabled a {
+  color: lightgray;
 }
 #blog_pagination a {
   text-decoration: none;
   color: black;
 }
 #blog_pagination a:hover {
-  color: lightgray;
+  color: #828282;
+}
+#resume_mailto {
+  font-style: italic;
+  position: relative;
+  top: -30px;
+  font-size: 14px;
+}
+.social-media-list img {
+  width: 30px;
+  height: 30px;
 }
