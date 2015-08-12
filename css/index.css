@@ -84,7 +84,6 @@ a.view-more {
   cursor: default;
 }
 #blog_pagination .disabled {
-  /*background: lightgray;*/
   pointer-events: none;
   cursor: default;
 }
@@ -104,7 +103,24 @@ a.view-more {
   top: -30px;
   font-size: 14px;
 }
-.social-media-list img {
-  width: 30px;
-  height: 30px;
+.social-media-list .icon {
+  width: 60px;
+  height: 60px;
+  fill: white;
+  background-color: gray;
+  border-radius: 60px;
 }
+.social-media-list li {
+  display: inline-block;
+}
+#footer_description {
+  font-size: 14px;
+  color: #828282;
+}
+
+.social-media-list .icon:hover {
+  background-color: #DC9004;
+  transition: 0.2s;
+  
+}
+
