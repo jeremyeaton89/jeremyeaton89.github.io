@@ -49,4 +49,23 @@ $(function() {
       },
     })
   })
+
+  // Projects
+  $('#projects_list li').click(function() {
+    var $expandButton = $(this).find('.expand-button');
+
+    if ($expandButton.is(':visible')) {
+      $expandButton.fadeOut(200, function() {
+        // $(this).css('background', 'none');
+      }.bind(this));
+      $(this).animate({'max-height': 1000}, 1000);
+    // } else if ($('#projects_list .expand-button').is(':hidden')) {
+
+    } else {
+      $(this).animate({'max-height': 80}, 600, function() {
+          $expandButton.fadeIn(200);
+          // $(this).css('background', '-webkit-linear-gradient(top,#fff 40px, #D5D3D3)')
+      });      
+    }
+  })
 })

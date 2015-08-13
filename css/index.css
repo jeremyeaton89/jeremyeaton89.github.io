@@ -38,11 +38,47 @@ a {
 #project_carousel .owl-page.active span {
   background-color: #DC9004;
 }
-#experience ul {
-  margin-top: 15px;
+#experience {
+  height: 280px;
 }
-.post-list {
+#experience ul {
+  list-style-type: none;
+  margin: 0;
+  height: 100%;
+}
+#experience_container {
+  width: 100%;
+  height: 206px;
+  margin: 15px 0;
+}
+#experience_labels {
+  width: 100px;
+  float: left;
+  padding: 0;
+  font-size: 14px;
+}
+#experience_labels li {
+  margin: 4px 0;
+  text-align: right;
+  padding-right: 17px;
+}
+#experience_chart {
+  float: left;
+  background: rgba(128, 128, 128, 0.5);
+  padding: 5px 20px;
+  width: 60%;
+  width: calc(100% - 100px);
+  box-sizing: border-box;
+}
+#experience_chart li {
+  height: 20px;
+  background-color: #DC9004;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 5px;
+}
+#blog .post-list {
   margin-left: 25px;
+  min-height: 330px;
 }
 #blog .post-list li {
   margin-bottom: 15px;
@@ -54,12 +90,14 @@ a.view-more {
   float: right;
   margin-top: 10px;
 }
+#blog {
+  clear: left;
+}
 #blog_pagination {
   padding: 0;
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
-
 }
 #blog_pagination li {
   list-style-type: none;
@@ -121,6 +159,44 @@ a.view-more {
 .social-media-list .icon:hover {
   background-color: #DC9004;
   transition: 0.2s;
-  
 }
-
+#projects_list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+#projects_list li {
+  max-height: 80px;
+  position: relative;
+  border-bottom: 1px solid lightgray;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+#projects_list .main-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  margin-right: 10px;
+  float: left;
+}
+#projects_list .description {
+  font-size: 12px;
+  float: left;
+}
+#projects_list .expand-button {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+  top: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  line-height: 65px;
+  font-size: 14px;
+  background: -webkit-linear-gradient(top, transparent 10px, rgb(172, 171, 171));
+  background: linear-gradient(top, transparent 10px, rgb(172, 171, 171));
+}
