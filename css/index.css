@@ -62,6 +62,16 @@ a {
   display: inline-block;
   position: absolute;
 }
+#level_labels .left {
+  left: 120px;
+}
+#level_labels .middle {
+  left: 54%; 
+  left: calc(50% + 25px);
+}
+#level_labels .right {
+  right: 15px;
+}
 #experience_labels {
   width: 100px;
   float: left;
@@ -152,9 +162,6 @@ a.view-more {
   text-decoration: none;
   color: black;
 }
-#blog_pagination a:hover {
-  color: #828282;
-}
 #resume_mailto {
   font-style: italic;
   position: relative;
@@ -220,3 +227,25 @@ a.view-more {
   background: -webkit-linear-gradient(top, transparent 10px, rgb(172, 171, 171));
   background: linear-gradient(top, transparent 10px, rgb(172, 171, 171));
 }
+
+/* prevent stick :hover on mobile */
+@media only screen and (min-width: 769px) {
+  #blog_pagination a:hover {
+    color: #828282;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #level_labels .left {
+    left: 100px;
+  }
+  #level_labels .middle {
+    left: 56%; 
+    left: calc(50% + 18px);
+  }
+  #level_labels .right {
+    right: 0;
+  }
+}
+
+

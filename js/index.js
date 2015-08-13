@@ -1,5 +1,5 @@
 $(function() {
-
+  
   // Nav
   $('a.page-link.blog').click(function() { 
     $('body').animate({ scrollTop: $('#blog').offset().top }, 500);
@@ -78,7 +78,7 @@ $(function() {
             $('#blog_pagination .disabled').removeClass('disabled');
             $('#blog_pagination .active').removeClass('active');
 
-            // Update pagination status'
+            // Update pagination UI
             $('#blog_pagination a:contains('+nextPage+')').addClass('active');
             if (nextPage === totalPages) {
               $('#next').parent('li').addClass('disabled')
@@ -102,15 +102,11 @@ $(function() {
 
     if ($expandButton.is(':visible')) {
       $expandButton.fadeOut(200, function() {
-        // $(this).css('background', 'none');
-      }.bind(this));
-      $(this).animate({'max-height': 1000}, 1000);
-    // } else if ($('#projects_list .expand-button').is(':hidden')) {
-
+        $(this).animate({'max-height': 1000}, 1000);        
+      }.bind(this))
     } else {
       $(this).animate({'max-height': 80}, 600, function() {
-          $expandButton.fadeIn(200);
-          // $(this).css('background', '-webkit-linear-gradient(top,#fff 40px, #D5D3D3)')
+        $expandButton.fadeIn(200);
       });      
     }
   })
