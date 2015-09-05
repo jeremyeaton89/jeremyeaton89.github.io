@@ -227,6 +227,18 @@ a.view-more {
   background: -webkit-linear-gradient(top, transparent 10px, rgb(172, 171, 171));
   background: linear-gradient(top, transparent 10px, rgb(172, 171, 171));
 }
+#projects_list h3 {
+  margin: 0;
+}
+#projects_list .tags {
+  margin: 0;
+  padding: 0;
+}
+#projects_list .tags li {
+  display: inline-block;
+  margin-right: 10px;
+  border-bottom: 1px solid #DC9004;
+}
 
 /* prevent stick :hover on mobile */
 @media only screen and (min-width: 769px) {

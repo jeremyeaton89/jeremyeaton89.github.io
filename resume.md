@@ -9,8 +9,9 @@ permalink: /resume/
 
 - JavaScript / JQuery / React.js / Cordova (PhoneGap) / Backbone.js
 - Ruby / Ruby on Rails / Rspec / Capybara
+- Objective-C / iOS
 - SQL / SQLite / PostgreSQL / MySQL / Firebase
-- HTM5 / CSS3
+- HTML5 / CSS3
 - Git
 
 ## Education
