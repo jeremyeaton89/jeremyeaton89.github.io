@@ -240,7 +240,7 @@ a.view-more {
   border-bottom: 1px solid #DC9004;
 }
 
-/* prevent stick :hover on mobile */
+/* prevent sticky :hover on mobile */
 @media only screen and (min-width: 769px) {
   #blog_pagination a:hover {
     color: #828282;

@@ -1,5 +1,5 @@
 ---
-title: Résumé
+title: Resume
 layout: page
 permalink: /resume/
 ---
@@ -20,7 +20,7 @@ permalink: /resume/
 
 *9 week, full time Ruby on Rails / JavaScript / SQL Web Development Boot Camp.*
 
-[Carriculum](http://www.appacademy.io/#p-curriculum)
+[Curriculum](http://www.appacademy.io/#p-curriculum)
 
 <h4>University of Calfornia, Berkeley <span class="date">August 2007 - May 2011</span></h4>
 
@@ -33,9 +33,12 @@ GPA: 3.4 (major), 3.2 (cumulative)
 <h4>Jeremy Eaton Consulting, San Francisco <span class="date">January 2015 – Present</span></h4>
 **Web Developer**
 
-- Rende
-- HoodsGuru
-- Party Print (Instagram Printer)
+- Rende (Jan '15 - Mar '15)  
+--- fleshed out much of this social event planning mobile (Cordova/ReactJS) app. 
+- HoodsGuru (May '15')  
+--- Wrote front end for up and coming wordpress events portal based in Toronto. 
+- Party Print (Aug '15)  
+--- Built the Cordova/ReactJS mobile app from the ground up.  
 
 <h4>The Hunt (ShopTap, Inc.) <span class="date">San Francisco, CA September 2013 – February 2015</span></h4>
 **Software Engineer**

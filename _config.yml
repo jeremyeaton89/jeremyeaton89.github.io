@@ -2,7 +2,7 @@
 title: Jeremy Eaton
 email: jeremyeaton89@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog, Résumé, Business Card for the Ages. 
+  Blog, Resume, Business Card for the Ages. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jeremyeaton.co" # the base hostname & protocol for your site
 twitter_username: jeremyeaton89
