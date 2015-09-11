@@ -34,7 +34,7 @@ GPA: 3.4 (major), 3.2 (cumulative)
 **Web Developer**
 
 - Rende (Jan '15 - Mar '15)  
---- fleshed out much of this social event planning mobile (Cordova/ReactJS) app. 
+--- Fleshed out much of this social event planning mobile (Cordova/ReactJS) app. 
 - HoodsGuru (May '15')  
 --- Wrote front end for up and coming wordpress events portal based in Toronto. 
 - Party Print (Aug '15)  
